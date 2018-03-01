@@ -2,9 +2,12 @@
 ## This may differ on a different PC  ###
 
 
-setwd("C:/Working Directory/Office/Data Science/Coursera/Exploratory Data Analysis/Week1 Assignment/exdata_data_household_power_consumption")
+setwd("C:/Working Directory/Assignment")
 
+if(!file.exists("./data"))
+{ dir.create("./data")}
 
+unzip(zipfile = "exdata_data_household_power_consumption.zip", exdir = "./data")
 ## Load the necessary libraries ## 
 
 library(lubridate)
@@ -15,7 +18,7 @@ library(grDevices)
 
                    ### Read the text file ###
 
-readfile <-  read.table("household_power_consumption.txt",sep = ';', header = TRUE, stringsAsFactors = FALSE)
+readfile <-  read.table("./data/household_power_consumption.txt",sep = ';', header = TRUE, stringsAsFactors = FALSE)
 
 ## Convert the date format using dmy() from lubridate package ##
 
@@ -39,3 +42,9 @@ dev.off()
 
 
                     ############### End of Program ###################
+
+
+
+
+
+
