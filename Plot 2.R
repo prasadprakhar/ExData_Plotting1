@@ -32,7 +32,6 @@ datetime <- paste(readfile$Date, readfile$Time)
 DateTime <- as.POSIXct(datetime)
 
 ## Plot 2: 
-
 png(filename = "Plot 2.png", width = 480, height = 480, units = "px")
 with(readfile, plot(Global_active_power ~ DateTime, type = "l", main = "Global Active Power",ylab = "Global Active Power(kilowatts)", xlab = ""))
 dev.off()
