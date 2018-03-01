@@ -5,6 +5,7 @@ setwd("C:/Working Directory/Assignment")
 if(!file.exists("./data"))
 { dir.create("./data")}
 
+
 unzip(zipfile = "exdata_data_household_power_consumption.zip", exdir = "./data")
 
 ## Load the necessary libraries ## 
